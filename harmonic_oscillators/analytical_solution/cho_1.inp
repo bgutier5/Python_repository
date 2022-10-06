@@ -1,0 +1,33 @@
+ 
+import numpy as np
+
+#Defining the parameters of the hamiltonian
+
+arbitrary_mass=1
+HO_mass = np.array([1,2])
+kconstant = np.array([2,4,])
+kcoup= 6
+
+	#obtaining element of K-matrix
+
+	K_diag = arbitrary_mass*kconstant/HO_mass
+
+	K_cross = arbitrary_mass*kcoup/np.sqrt(HO_mass[0])*np.sqrt(HO_mass[1])
+
+
+
+	#arranging the elements of kmat
+
+	K_MAT = np.matrix([[K_diag[1], K_cross[0]], [K_cross[0], K_diag[2]]])
+
+	#diagonalizing K-mat
+
+from numpy import linalg as LA
+K_FIN=LA.eig(K_MAT)[0]
+
+#using eigenvalues to obtain energy
+
+e1 = 1/2*hbar*sqrt(K_FIN[0]/arbitrary_mass)
+e2 = 1/2*hbar*sqrt(K_FIN[1]/arbitrary_mass)
+Energy = e1+e2
+

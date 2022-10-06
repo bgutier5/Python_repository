@@ -1,0 +1,8 @@
+#  Initial inputs for the hamiltonian
+
+states_per_oscillator = 4 
+mass                  = [1,1,1,1]
+k_OHconstant          = [1,1,1,1]
+k_coupling            = [0.1,0.1,0.1,0.1]
+hbar                  = 1.0
+arbitrary_mass        = 1

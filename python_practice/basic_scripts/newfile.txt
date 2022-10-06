@@ -1,0 +1,1 @@
+hello world in the new fileThis is another line in the new file

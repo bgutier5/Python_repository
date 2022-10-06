@@ -1,0 +1,6 @@
+this is my first replacement
+this is my second replacement
+this is my third replacement
+this is the last replacement of my file
+
+l = [1,1,1]
